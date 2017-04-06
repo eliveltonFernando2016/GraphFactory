@@ -3,9 +3,9 @@ package graphfactory;
 import java.util.ArrayList;
 
 public class Vertex {
-
+    
     private ArrayList<Edge> neighborhood;
-    private String id;
+    private String id;    
 
     public Vertex(String id) {
         this.id = id;
@@ -62,5 +62,5 @@ public class Vertex {
 
     public ArrayList<Edge> getNeighbors() {
         return new ArrayList<Edge>(this.neighborhood);
-    }
+    }          
 }
