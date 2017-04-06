@@ -9,7 +9,6 @@ public class DFS_Vertex extends Vertex{
     private Color color;    
     private Vertex daddy;
     private int d, f;
-    
    
     public DFS_Vertex(String id){
         super(id);
