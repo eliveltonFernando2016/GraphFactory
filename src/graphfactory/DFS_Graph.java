@@ -1,5 +1,3 @@
-
-
 package graphfactory;
 
 import java.util.ArrayList;
@@ -12,7 +10,6 @@ import java.util.Set;
  * @author lucasgb
  */
 public class DFS_Graph implements Graph{
-    
     private HashMap<String, DFS_Vertex> vertices;
     private HashMap<Integer, Edge> edges;
 

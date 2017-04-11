@@ -5,13 +5,13 @@ public class GraphDemo {
     public static void main(String[] args) {
         GraphFactory graphFactory = new GraphFactory();
         
-        Graph graph = graphFactory.getGraph("Busca de Profundidade");        
+        Graph graph = graphFactory.getGraph("Busca em Largura");        
         
-        DFS_Vertex[] vertices = new DFS_Vertex[5];
+        BFS_Vertex[] vertices = new BFS_Vertex[5];
 
         for (int i = 0; i < vertices.length; i++) {
 
-            vertices[i] = new DFS_Vertex("" + i);
+            vertices[i] = new BFS_Vertex("" + i);
 
             graph.addVertex(vertices[i], true);
 
@@ -37,7 +37,7 @@ public class GraphDemo {
             System.out.println();
 
         }
-        DFS dfs = new DFS(graph);
+        BFS bfs = new BFS(graph, vertices[0]);
 
     }
 }   
