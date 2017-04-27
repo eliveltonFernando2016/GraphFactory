@@ -5,13 +5,13 @@ public class GraphDemo {
     public static void main(String[] args) {
         GraphFactory graphFactory = new GraphFactory();
         
-        Graph graph = graphFactory.getGraph("Busca em Largura");        
+        Graph graph = graphFactory.getGraph("Busca Topologica");        
         
-        BFS_Vertex[] vertices = new BFS_Vertex[5];
+        DFS_Vertex[] vertices = new DFS_Vertex[5];
 
         for (int i = 0; i < vertices.length; i++) {
 
-            vertices[i] = new BFS_Vertex("" + i);
+            vertices[i] = new DFS_Vertex("" + i);
 
             graph.addVertex(vertices[i], true);
 
@@ -23,21 +23,17 @@ public class GraphDemo {
             }
         }
 
-        //display the initial setup- all vertices adjacent to each other
+        // Displays the initial setup. All vertices adjacent to each other.
         for (int i = 0; i < vertices.length; i++) {
-
             System.out.println(vertices[i]);
-
             for (int j = 0; j < vertices[i].getNeighborCount(); j++) {
-
                 System.out.println(vertices[i].getNeighbor(j));
-
             }
-
             System.out.println();
-
         }
-        BFS bfs = new BFS(graph, vertices[0]);
-
+        System.out.println(vertices[2].getNeighbor(0));
+        
+        Topological top = new Topological(graph);
+        //top.displayList();
     }
 }   

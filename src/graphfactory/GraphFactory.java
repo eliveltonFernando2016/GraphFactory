@@ -9,6 +9,8 @@ public class GraphFactory{
             return new DFS_Graph();
         } else if(graphType.equalsIgnoreCase("Busca em Largura")){
             return new BFS_Graph();
+        } else if(graphType.equalsIgnoreCase("Busca Topologica")){
+            return new DFS_Graph();
         }
         return null;
     }

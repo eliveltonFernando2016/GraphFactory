@@ -9,9 +9,10 @@ import java.util.Map;
  */
 public class DFS {
 
-    private int time = 0;      
+    private int time;
 
     public DFS(Graph graph){                
+        time = 0;
         Iterator i = graph.getVertices().entrySet().iterator();
         
         while(i.hasNext()){
@@ -46,6 +47,7 @@ public class DFS {
         }
         u.setColor(Color.BLACK);
         time += 1;
-        u.setf(time);                   
+        u.setf(time);               
+        
     }        
 }
